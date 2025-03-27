@@ -5,6 +5,7 @@ export GH_TOKEN=""
 export GH_IMAGE_NAME="hello-world"
 export GH_VER="1.0.0"
 export TAG_NAME="ghcr.io/$GH_USERNAME/$GH_IMAGE_NAME:$GH_VER"
+```
 
 ## step 1: login docker
 > echo $GH_TOKEN | docker login ghcr.io -u $GH_USERNAME --password-stdin
@@ -16,4 +17,3 @@ export TAG_NAME="ghcr.io/$GH_USERNAME/$GH_IMAGE_NAME:$GH_VER"
 ## step 3: push docker image to ghcr.io
 > docker push ghcr.io/529149/hello-world:1.0.0
 > or docker push $TAG_NAME
-```
